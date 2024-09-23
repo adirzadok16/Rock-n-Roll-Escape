@@ -12,7 +12,7 @@ Features
 -Time-Based Scoring: Earn points for survival time
 -Intuitive Controls: Easy-to-use left and right controls (in Regular mode)
 
-##Gameplay
+## Gameplay
 
 -Choose between Regular mode (button controls) or Sensor mode (device tilt controls)
 -Use controls to navigate the car across three lanes
@@ -22,20 +22,20 @@ Features
 -The game ends when the car collides with a rock
 -View your score and check if you've made it to the record table
 
-##Record Table
+## Record Table
 
 -Access the record table to view top scores
 -Click on a player's name to see their gameplay location on the map
 -Challenge yourself to beat the top scores and claim your spot on the leaderboard
 
-##Installation
+## Installation
 
 1.Clone the repository:
 bashCopygit clone https://github.com/adirzadok16/RollingRocksGame.git
 2.Open the project in Android Studio.
 3.Build and run the project on an Android device or emulator.
 
-##How to Play
+## How to Play
 
 -Launch the game and choose your preferred game mode (Regular or Sensor)
 -Adjust the game speed if desired
