@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.HighScoreFragment">
+
+    <TextView
+        android:id="@+id/empty_state_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="No players available"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textSize="18sp"
+        android:padding="40dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_RCV_scores"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/horizontal_highscore" />
+
+</FrameLayout>

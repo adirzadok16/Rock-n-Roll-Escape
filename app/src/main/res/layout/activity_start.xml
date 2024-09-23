@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_color"
+    tools:context=".StartActivity">
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/main_LBL_headLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:gravity="center"
+        android:text="@string/rolling_rock_game"
+        android:textColor="@color/black"
+        android:textSize="45sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:layout_below="@+id/main_LBL_headLine"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="50dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/start_BTN_sensormode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="@string/sensor_mode"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/start_BTN_fastmode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="@string/fast_game"
+            android:textSize="20sp"
+            android:layout_marginBottom="20dp"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/main_BTN_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="@string/start_game"
+            android:textSize="20sp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/black"
+            android:backgroundTint="#CFD8DC"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/start_BTN_recordTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="@string/table_of_records"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:backgroundTint="#CFD8DC"/>
+    </LinearLayout>
+
+</RelativeLayout>

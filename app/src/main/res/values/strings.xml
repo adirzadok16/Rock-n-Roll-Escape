@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">RollingRockGameAdvanced</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="placeholder_playername">Enter Your Name</string>
+    <string name="SUBMIT">SUBMIT</string>
+    <string name="table_of_records">Records Table</string>
+    <string name="start_game">Start game</string>
+    <string name="fast_game">Fast game</string>
+    <string name="sensor_mode">Sensors</string>
+    <string name="rolling_rock_game">Rolling Rock Game</string>
+    <string name="home">home</string>
+</resources>

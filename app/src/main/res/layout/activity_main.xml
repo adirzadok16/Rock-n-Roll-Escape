@@ -1,0 +1,924 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_color"
+    tools:context=".MainActivity">
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/score_LBL_result"
+        android:layout_width="@dimen/all_hearts_width"
+        android:layout_height="@dimen/all_heart_height"
+        android:textSize="@dimen/score_size"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/default_margin"
+        tools:text="00" />
+
+<!-- hearts -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="@dimen/all_hearts_width"
+        android:layout_height="@dimen/all_heart_height"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginStart="@dimen/default_margin">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_heart0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/heart" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_heart1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="@dimen/heart_margin"
+            app:srcCompat="@drawable/heart" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_heart2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/heart" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!-- Rock Matrix Container: Holds 6 Rows -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/rockMatrixContainer"
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+       >
+
+        <!-- Row 1 -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5"
+            >
+            <!-- 5 Images in Row 1 -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_rock00"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/rock"
+                android:scaleType="fitCenter"
+                android:tag="rock"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_rock01"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/rock"
+                android:scaleType="fitCenter"
+                android:tag="rock"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_rock02"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/rock"
+                android:scaleType="fitCenter"
+                android:tag="rock"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_rock03"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/rock"
+                android:scaleType="fitCenter"
+                 android:tag="rock"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_rock04"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/rock"
+                android:scaleType="fitCenter"
+                 android:tag="rock"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!-- Row 2 -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
+            <!-- 5 Images in Row 2 -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_rock10"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/rock"
+                android:scaleType="fitCenter"
+                 android:tag="rock"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                 android:id="@+id/main_IMG_rock11"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/rock"
+                android:scaleType="fitCenter"
+                 android:tag="rock"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_rock12"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/rock"
+                android:scaleType="fitCenter" />
+            <com.google.android.material.imageview.ShapeableImageView
+                 android:id="@+id/main_IMG_rock13"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/rock"
+                android:scaleType="fitCenter"
+                 android:tag="rock"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_rock14"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/rock"
+                android:scaleType="fitCenter"
+                 android:tag="rock"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!-- Row 3 -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
+            <!-- 5 Images in Row 3 -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_rock20"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/rock"
+                android:scaleType="fitCenter"
+                 android:tag="rock"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                 android:id="@+id/main_IMG_rock21"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/rock"
+                android:scaleType="fitCenter"
+                 android:tag="rock"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_rock22"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/rock"
+                android:scaleType="fitCenter"
+                 android:tag="rock"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_rock23"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/rock"
+                android:scaleType="fitCenter"
+                 android:tag="rock"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_rock24"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/rock"
+                android:scaleType="fitCenter"
+                 android:tag="rock"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!-- Row 4 -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
+            <!-- 5 Images in Row 4 -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_rock30"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/rock"
+                android:scaleType="fitCenter" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_rock31"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/rock"
+                android:scaleType="fitCenter"
+                 android:tag="rock"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_rock32"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/rock"
+                android:scaleType="fitCenter"
+                 android:tag="rock"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_rock33"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/rock"
+                android:scaleType="fitCenter"
+                 android:tag="rock"/>>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_rock34"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/rock"
+                android:scaleType="fitCenter"
+                 android:tag="rock"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!-- Row 5 -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
+            <!-- 5 Images in Row 5 -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_rock40"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/rock"
+                android:scaleType="fitCenter"
+                 android:tag="rock"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_rock41"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/rock"
+                android:scaleType="fitCenter"
+                 android:tag="rock"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_rock42"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/rock"
+                android:scaleType="fitCenter"
+                 android:tag="rock"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_rock43"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/rock"
+                android:scaleType="fitCenter"
+                 android:tag="rock"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_rock44"
+
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/rock"
+                android:scaleType="fitCenter"
+                 android:tag="rock"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!-- Row 6 -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
+            <!-- 5 Images in Row 6 -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_rock50"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/rock"
+                android:scaleType="fitCenter"
+                 android:tag="rock"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_rock51"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/rock"
+                android:scaleType="fitCenter"
+                 android:tag="rock"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_rock52"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/rock"
+                android:scaleType="fitCenter"
+                android:tag="rock"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_rock53"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/rock"
+                android:scaleType="fitCenter"
+                 android:tag="rock"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_rock54"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/rock"
+                android:scaleType="fitCenter"
+                 android:tag="rock"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    <!-- Coin Matrix Container: Holds 6 Rows -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/coinMatrixContainer"
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <!-- Row 1 -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
+            <!-- 5 Images in Row 1 -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_coin00"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coin"
+                android:scaleType="fitCenter"
+                android:tag="coin"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_coin01"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coin"
+                android:scaleType="fitCenter"
+                android:tag="coin"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_coin02"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coin"
+                android:scaleType="fitCenter"
+                android:tag="coin"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_coin03"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coin"
+                android:scaleType="fitCenter"
+                android:tag="coin"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_coin04"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coin"
+                android:scaleType="fitCenter"
+                android:tag="coin"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!-- Row 2 -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
+            <!-- 5 Images in Row 2 -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_coin10"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coin"
+                android:scaleType="fitCenter"
+                android:tag="coin"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_coin11"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coin"
+                android:scaleType="fitCenter"
+                android:tag="coin"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_coin12"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coin"
+                android:scaleType="fitCenter"
+                android:tag="coin"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_coin13"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coin"
+                android:scaleType="fitCenter"
+                android:tag="coin"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_coin14"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coin"
+                android:scaleType="fitCenter"
+                android:tag="coin"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!-- Row 3 -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
+            <!-- 5 Images in Row 3 -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_coin20"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coin"
+                android:scaleType="fitCenter"
+                android:tag="coin"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_coin21"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coin"
+                android:scaleType="fitCenter"
+                android:tag="coin"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_coin22"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coin"
+                android:scaleType="fitCenter"
+                android:tag="coin"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_coin23"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coin"
+                android:scaleType="fitCenter"
+                android:tag="coin"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_coin24"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coin"
+                android:scaleType="fitCenter"
+                android:tag="coin"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!-- Row 4 -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
+            <!-- 5 Images in Row 4 -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_coin30"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coin"
+                android:scaleType="fitCenter"
+                android:tag="coin"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_coin31"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coin"
+                android:scaleType="fitCenter"
+                android:tag="coin"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_coin32"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coin"
+                android:scaleType="fitCenter"
+                android:tag="coin"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_coin33"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coin"
+                android:scaleType="fitCenter"
+                android:tag="coin"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_coin34"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coin"
+                android:scaleType="fitCenter"
+                android:tag="coin"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!-- Row 5 -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
+            <!-- 5 Images in Row 5 -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_coin40"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coin"
+                android:scaleType="fitCenter"
+                android:tag="coin"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_coin41"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coin"
+                android:scaleType="fitCenter"
+                android:tag="coin"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_coin42"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coin"
+                android:scaleType="fitCenter"
+                android:tag="coin"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_coin43"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coin"
+                android:scaleType="fitCenter"
+                android:tag="coin"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_coin44"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coin"
+                android:scaleType="fitCenter"
+                android:tag="coin"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!-- Row 6 -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
+            <!-- 5 Images in Row 6 -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_coin50"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coin"
+                android:scaleType="fitCenter"
+                android:tag="coin"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_coin51"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coin"
+                android:scaleType="fitCenter"
+                android:tag="coin"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_coin52"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coin"
+                android:scaleType="fitCenter"
+                android:tag="coin"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_coin53"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coin"
+                android:scaleType="fitCenter"
+                android:tag="coin"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_coin54"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/coin"
+                android:scaleType="fitCenter"
+                android:tag="coin"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- LinearLayout for 5 Images -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/imageRowLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp"
+        android:layout_marginBottom="180dp"
+        >
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_car0"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/car"
+            android:visibility="invisible"
+            android:scaleType="fitCenter" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_car1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/car"
+            android:scaleType="fitCenter" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_car2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/car"
+            android:visibility="visible"
+            android:scaleType="fitCenter" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_car3"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/car"
+            android:visibility="invisible"
+            android:scaleType="fitCenter" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_car4"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/car"
+            android:visibility="invisible"
+
+            android:scaleType="fitCenter" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/default_margin"
+        android:layout_marginBottom="@dimen/buttons_bottom_margin">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/main_BTN_left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:backgroundTint="#42A5F5"
+            app:icon="@drawable/left_arrow"
+            app:iconGravity="textEnd"
+            app:iconSize="40dp"/>
+
+
+        <View
+            android:layout_width="@dimen/default_margin"
+            android:layout_height="0dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/main_BTN_right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:backgroundTint="#42A5F5"
+            app:icon="@drawable/right_arrow"
+            app:iconGravity="textEnd"
+            app:iconSize="40dp"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <!--card for player name -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/start_CARD_playerName"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginHorizontal="50dp"
+        android:padding="10dp"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="10dp"
+        android:visibility="invisible">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/main_player_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:hint="@string/placeholder_playername"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_centerHorizontal="true"/>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/main_BTN_submit"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/blue_grey"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/SUBMIT"
+                app:cornerRadius="10dp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

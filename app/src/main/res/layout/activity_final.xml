@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_color"
+    tools:context=".FinalActivity">
+
+    <!-- Background Image -->
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.8"
+        android:scaleType="centerCrop"
+        android:background="@drawable/gradient_color"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+       >
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/final_BTN_return_button"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/left_arrow"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!-- Fragments Container -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/fragments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_below="@id/title">
+
+        <!-- Empty State TextView -->
+        <TextView
+            android:id="@+id/empty_state_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No players available"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textSize="18sp"
+            android:padding="16dp" />
+
+        <!-- Board List Fragment -->
+        <FrameLayout
+            android:id="@+id/final_FRM_scorelist"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="8dp" />
+
+        <!-- Board Map Fragment -->
+        <FrameLayout
+            android:id="@+id/final_FRM_map"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginVertical="8dp"
+            android:layout_marginHorizontal="10dp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</RelativeLayout>
