@@ -45,3 +45,7 @@ bashCopygit clone https://github.com/adirzadok16/RollingRocksGame.git
 - Explore the map to see where top players achieved their scores
 - Play again to improve your skills and climb the leaderboard!
 
+## Video
+
+https://github.com/user-attachments/assets/3d4de186-78e9-4953-857f-2eaab59f568b
+
